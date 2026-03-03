@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #44403b, #57534d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting {
+  display: none;
+}
+
+.greeting.active {
+  background: linear-gradient(180deg, hsl(39, 100%, 40%), hsl(39, 100%, 30%));
+  color: #fff;
+  padding: 20px 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #000;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  animation: animate-greeting 1.8s ease-in-out;
+  display: inline-block;
+}
+
+@keyframes animate-greeting {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.greeting p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: lightblue;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #000;
+}
+
+.container {
+  display: none;
+}
+
+.container.active {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  animation: animate3 1.8s ease-in-out;
+}
+
+@keyframes animate3 {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container #input {
+  width: 100%;
+  height: 70px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: right;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.container #input::placeholder {
+  font-size: 1.5rem;
+}
+
+.container .box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container button {
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  margin: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #333333;
+  backdrop-filter: blur(30px);
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.container .box button:hover {
+  background: hsl(0, 0%, 10%);
+  transform: scale(1.1);
+}
+
+.container .box button::active {
+  background: hsl(0, 0%, 30%);
+}
+
+.container .box #AC {
+  background: #00c950;
+}
+
+.container .box #AC:hover {
+  background: hsl(144, 100%, 20%);
+  transform: scale(1.1);
+}
+
+.container .box #delete {
+  background: #e7000b;
+}
+
+.container .box #delete:hover {
+  background: hsl(357, 100%, 35%);
+  transform: scale(1.1);
+}
+
+.container .box #equal {
+  background: #ff6900;
+}
+
+.container .box #equal:hover {
+  background: hsl(25, 100%, 30%);
+  transform: scale(1.1);
+}
+
+.container .box #modolus,
+#divide,
+#multiply,
+#subtract,
+#add {
+  background: #ff8904;
+}
+
+.container .box #modolus:hover,
+#divide:hover,
+#multiply:hover,
+#subtract:hover,
+#add:hover {
+  transform: scale(1.1);
+}
